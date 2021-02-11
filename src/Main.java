@@ -6,7 +6,7 @@ interface theInterface{
 }
 public class Main {
     public void myMessage(){
-        System.out.print(">>> Example messsage <<<");
+        System.out.print(">>> after Merging <<<");
     }
     public static void main(String[] args) {
         Main obj = new Main();
