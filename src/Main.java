@@ -1,16 +1,20 @@
-
-
-@FunctionalInterface
-interface theInterface{
-    void show();
+interface Callable {
+    public void call(int param);
 }
-public class Main {
-    public void myMessage(){
-        System.out.println(">>> Example message <<<");
+
+class Test implements Callable {
+    public void call(int param) {
+        System.out.println( param );
     }
-    public static void main(String[] args) {
-        Main obj = new Main();
-        theInterface ref = obj::myMessage;
-        ref.show();
+}
+
+public class Main{
+    public static void invoke(Callable callable, int param){
+        callable.call(param);
+    }
+    public static void main(String []args){
+        Callable cmd = new Test();
+        invoke(cmd, 10);
+
     }
 }
