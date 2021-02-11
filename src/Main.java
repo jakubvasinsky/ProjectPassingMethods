@@ -6,11 +6,11 @@ interface theInterface{
 }
 public class Main {
     public void myMessage(){
-        System.out.println(">>> Example message <<<");
+        System.out.print(">>> Example messsage <<<");
     }
     public static void main(String[] args) {
         Main obj = new Main();
-        theInterface ref = obj::myMessage;
-        ref.show();
+        theInterface ref2 = obj::myMessage;
+        ref2.show();
     }
 }
